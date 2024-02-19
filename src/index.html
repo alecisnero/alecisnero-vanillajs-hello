@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Generador de Nombre de Dominios</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -13,17 +13,41 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container-fluid text-center ">
+      <!-- CAJA DE TITULO -->
+      <div class="separador d-flex justify-content-center">
+        <div class="title bg-light w-75 border rounded mt-3">
+          <h1>Generador de Nombre de Dominio</h1>
+        </div>
+      </div>
+      <!-- CAJA DE BOTÓN -->
+      <div class="container " style="margin-top: 50px;">
+        <!-- <button
+          class="btn btn-primary"
+          type="button" >Generar Dominio</button>
+        </button> -->
       </div>
     </div>
+
+    <script>
+      let pronoun = ["the", "our"];
+      let adj = ["great", "big"];
+      let noun = ["jogger", "racoon"];
+      let ext = [".com", ".net"];
+
+      for (let p = 0; p < pronoun.length; p++) {
+        for (let a = 0; a < adj.length; a++) {
+          for (let n = 0; n < noun.length; n++) {
+            for (let e = 0; e < ext.length; e++) {
+              document.write(
+                `<div class="separador d-flex justify-content-center"><h4 class="me-3">El domino generado es: </h4>
+<div class='alert alert-success w-25 d-flex justify-content-center'><h5>
+                    ${pronoun[p]}${adj[a]}${noun[n]}${ext[e]} <br> </h5></div></div>`
+              );
+            }
+          }
+        }
+      }
+    </script>
   </body>
 </html>
